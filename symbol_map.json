@@ -24,13 +24,14 @@
         {
           "mark": {
             "type": "text",
-            "tooltip": [ {"field": "Title", "type": "nominal"},
-                       {"field": "Artists", "type": "nominal", "format": ","},
-                       {"field": "Album", "type": "nominal", "format": ","}]
+            
           },
           
           "encoding": {
-            "text": {"field": "Country", "type": "nominal"}
+            "text": {"field": "Country", "type": "nominal"},
+            "tooltip": [ {"field": "Title", "type": "nominal", "title": "Song Title"},
+              {"field": "Artists", "type": "nominal", "title": "Artist(s)"},
+              {"field": "Album", "type": "nominal", "title": "Album"}]
           }
         }
       ]
