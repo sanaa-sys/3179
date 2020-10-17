@@ -16,10 +16,6 @@
       "data": {
         "url": "https://github.com/sanaa-sys/3179/blob/main/SpotifyTopSongsByCountry%20-%20May%202020.csv"
       },
-      "encoding": {
-        "longitude": {"field": "Longitude", "type": "quantitative"},
-        "latitude": {"field": "Latitude", "type": "quantitative"}
-      },
       "layer": [
         {
           "mark": {
@@ -28,6 +24,8 @@
           },
           
           "encoding": {
+            "longitude": {"field": "Longitude", "type": "quantitative"},
+            "latitude": {"field": "Latitude", "type": "quantitative"},
             "text": {"field": "Country", "type": "nominal"},
             "tooltip": [ {"field": "Title", "type": "nominal", "title": "Song Title"},
               {"field": "Artists", "type": "nominal", "title": "Artist(s)"},
