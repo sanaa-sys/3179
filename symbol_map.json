@@ -1,56 +1,136 @@
 {
-  "$schema": "https://vega.github.io/schema/vega-lite/v3.json",
-  "width": 500,
-  "height": 300,
-  "title": "Child poverty in Greater Manchester",
-  "data": {"url": "https://opendata.arcgis.com/datasets/fab4feab211c4899b602ecfbfbc420a3_3.geojson", "format": {"property": "features"}},
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "width": 900,
+  "height": 560,
+  "padding": {"top": 0, "left": 0, "right": 0, "bottom": 0},
+  "signals": [  {
+    "name": "hover",
+    "value": null,
+    "on": [
+      {"events": "symbol:mouseover", "update": "datum"},
+      {"events": "symbol:mouseout", "update": "null"}
+    ]
+  },
+  {
+    "name": "title",
+    "value": "U.S. Airports, 2008",
+    "update": "hover ? hover.name + ' (' + hover.iata + ')' : 'U.S. Airports, 2008'"
+  }],
+  "data": [
+      {
+    "name": "states",
+    "url": "data/us-10m.json",
+    "format": {"type": "topojson", "feature": "states"},
+    "transform": [
+      {
+        "type": "geopath",
+        "projection": "projection"
+      }
+    ]
+  },
+  {
+  "name": "traffic",
+  "url": "data/flights-airport.csv",
+  "format": {"type": "csv", "parse": "auto"},
   "transform": [
-    {"filter": {"field": "properties.lad17nm", "oneOf": ["Bolton","Bury","Manchester","Oldham","Rochdale","Salford","Stockport","Tameside","Trafford","Wigan"]}},
     {
-      "lookup": "properties.lad17nm",
-      "from": {
-        "data": {"values": [
-          {"lad17nm": "Bolton", "percent": 0.34},
-          {"lad17nm": "Bury", "percent": 0.27},
-          {"lad17nm": "Manchester", "percent": 0.44},
-          {"lad17nm": "Oldham", "percent": 0.41},
-          {"lad17nm": "Rochdale", "percent": 0.36},
-          {"lad17nm": "Salford", "percent": 0.32},
-          {"lad17nm": "Stockport", "percent": 0.21},
-          {"lad17nm": "Tameside", "percent": 0.3},
-          {"lad17nm": "Trafford", "percent": 0.22},
-          {"lad17nm": "Wigan", "percent": 0.25}
-        ]},
-        "key": "lad17nm",
-        "fields": ["lad17nm", "percent"]
+      "type": "aggregate",
+      "groupby": ["origin"],
+      "fields": ["count"], "ops": ["sum"], "as": ["flights"]
+    }
+  ]
+},
+  {
+  "name": "airports",
+  "url": "data/airports.csv",
+  "format": {"type": "csv", "parse": "auto"},
+    "transform": [
+          {
+      "type": "lookup",
+      "from": "traffic", "key": "origin",
+      "fields": ["iata"], "as": ["traffic"]
+    },
+    {
+      "type": "filter",
+      "expr": "datum.traffic != null"
+    },
+    {
+      "type": "geopoint",
+      "projection": "projection",
+      "fields": ["longitude", "latitude"]
+    },
+    {
+      "type": "filter",
+      "expr": "datum.x != null && datum.y != null"
+    }
+  ]
+}
+  ],
+  "scales": [
+      {
+    "name": "size",
+    "type": "linear",
+    "domain": {"data": "traffic", "field": "flights"},
+    "range": [16, 1000]
+  }
+  ],
+  "projections": [
+      {
+    "name": "projection",
+    "type": "albersUsa",
+    "scale": 1200,
+    "translate": [{"signal": "width / 2"}, {"signal": "height / 2"}]
+  }
+  ],
+  "marks": [
+      {
+    "type": "path",
+    "from": {"data": "states"},
+    "encode": {
+      "enter": {
+        "fill": {"value": "#dedede"},
+        "stroke": {"value": "white"}
+      },
+      "update": {
+        "path": {"field": "path"}
       }
     }
-  ],
-"projection": {
-    "type": "mercator"
   },
-  "mark": {
-        "type": "geoshape",
-        "stroke": "#212121",
-        "strokeWidth": 1
-      },
-  "encoding": {
-    "color": {
-      "field": "percent",
-      "type": "quantitative",
-      "scale": {"scheme": "Oranges"},
-    "legend": {
-            "title": null,
-            "format": "%"
-          }},
-    "tooltip": [
-          {"field": "properties.lad17nm", "type": "nominal", "title": "Name"},
-          {
-            "field": "percent",
-            "type": "quantitative",
-            "format": ".1%",
-            "title": "Child poverty"
-          }
-        ]
+{
+  "type": "symbol",
+  "from": {"data": "airports"},
+  "encode": {
+    "enter": {
+      "size": {"scale": "size", "field": "traffic.flights"},
+      "fill": {"value": "steelblue"},
+      "fillOpacity": {"value": 0.8},
+      "stroke": {"value": "white"},
+      "strokeWidth": {"value": 1.5}
+    },
+    "update": {
+      "x": {"field": "x"},
+      "y": {"field": "y"}
+    }
   }
+},
+ {
+  "type": "text",
+  "interactive": false,
+  "padding": {"top": 25, "left": 0, "right": 0, "bottom": 0},
+  "encode": {
+    "enter": {
+      "x": {"signal": "width", "offset": -5},
+      "y": {"value": 0},
+      "fill": {"value": "black"},
+      "fontSize": {"value": 20},
+      "align": {"value": "right"}
+    },
+    "update": {
+      "text": {"signal": "title"}
+    }
+  }
+}
+  ]
+
+
 }
