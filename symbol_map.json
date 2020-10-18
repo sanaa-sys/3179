@@ -19,7 +19,7 @@
   "data": [
       {
     "name": "states",
-    "url": "data/us-10m.json",
+    "url": "https://raw.githubusercontent.com/sanaa-sys/3179/main/us-10m.json",
     "format": {"type": "topojson", "feature": "states"},
     "transform": [
       {
@@ -30,7 +30,7 @@
   },
   {
   "name": "traffic",
-  "url": "data/flights-airport.csv",
+  "url": "https://raw.githubusercontent.com/sanaa-sys/3179/main/flights-airports.csv",
   "format": {"type": "csv", "parse": "auto"},
   "transform": [
     {
@@ -42,7 +42,7 @@
 },
   {
   "name": "airports",
-  "url": "data/airports.csv",
+  "url": "https://raw.githubusercontent.com/sanaa-sys/3179/main/airports.csv",
   "format": {"type": "csv", "parse": "auto"},
     "transform": [
           {
