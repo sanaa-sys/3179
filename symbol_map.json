@@ -14,7 +14,7 @@
     },
     {
       "data": {
-        "url": "https://docs.google.com/spreadsheets/d/1tWUx917iOMkqS2EbZ6xMhaqSGpwKVeuZ90rYBtv47JQ/edit?usp=sharing"
+        "url": "https://raw.githubusercontent.com/sanaa-sys/3179/main/SpotifyTopSongsByCountry%20-%20May%202020.csv"
       },
       "encoding": {
         "longitude": {"field": "Longitude", "type": "quantitative"},
