@@ -1,0 +1,65 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 500,
+  "height": 400,
+  "title": "Life Expectancy vs Fertility rate (2018 data)",
+  "data": {
+  "url": "https://docs.google.com/spreadsheets/d/1jujnpavHBAHi3Esa6g1U__hvSP56vZkkbVPyY2QBnpo/edit#gid=294044376"
+  },
+  
+  "mark": "circle",
+  "encoding": {
+  "x": {
+  "field": "Fertility Rate",
+  "type": "quantitative",
+  "title": "Fertility Rate",
+  "axis": {"tickCount": 7},
+  "scale": {"type": "linear", "domain": [1, 7]}
+  },
+  "y": {
+  "field": "Life Expentancy",
+  "type": "quantitative",
+  "axis": {"tickCount": 6},
+  "scale": {"type": "linear", "domain": [1, 100]}
+  },
+  "color": {
+  "field": "Continent",
+  "type": "nominal",
+  "scale": {
+  "domain": [
+  "North America",
+  "South America",
+  "Europe",
+  "Africa",
+  "Asia",
+  "Oceania"
+  ],
+  "range": [
+  "#e41a1c",
+  "#984ea3",
+  "#ff7f00",
+  "#a6cee3",
+  "#377eb8",
+  "#a65628"
+  ]
+  }
+  },
+  "opacity": {
+  "value": 0.6
+  },
+  "size": {
+  "field": "Population",
+  "type": "quantitative",
+  "scale": {
+  "type": "threshold",
+  "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+  "range": [10, 50, 150, 200, 300, 400]
+  },
+  "legend": {"format": ".1s"}
+  },
+  "tooltip": [
+  
+  
+  ]
+  }
+ }
