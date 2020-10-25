@@ -1,0 +1,194 @@
+Country Name,Life Expectancy,Population,Continent
+Aruba,76.152,106314,South America
+Afghanistan,64.486,38041754,Asia
+Angola,60.782,31825295,Africa
+Albania,78.458,2854191,Europe
+United Arab Emirates,77.814,9770529,Asia
+Argentina,76.52,44938712,South America
+Armenia,74.945,2957731,Europe
+Antigua and Barbuda,76.885,97118,North America
+Australia,82.74878049,25364307,Oceania
+Austria,81.69268293,8877067,Europe
+Azerbaijan,72.864,10023318,Europe
+Burundi,61.247,11530580,Africa
+Belgium,81.59512195,11484055,Europe
+Benin,61.47,11801151,Africa
+Burkina Faso,61.174,20321378,Africa
+Bangladesh,72.32,163046161,Asia
+Bulgaria,74.96341463,6975761,Europe
+Bahrain,77.163,1641172,Asia
+Bosnia and Herzegovina,77.262,3301000,Europe
+Belarus,74.17560976,9466856,Europe
+Belize,74.496,390353,North America
+Bermuda,81.65170732,63918,North America
+Bolivia,71.239,11513100,South America
+Brazil,75.672,211049527,South America
+Barbados,79.081,287025,North America
+Brunei Darussalam,75.722,433285,Asia
+Bhutan,71.46,763092,Asia
+Botswana,69.275,2303697,Africa
+Central African Rep.,52.805,4745185,Africa
+Canada,81.94878049,37589262,North America
+Switzerland,83.75365854,8574832,Europe
+Channel Islands,82.928,172259,Europe
+Chile,80.042,18952038,South America
+China,76.704,1397715000,Asia
+Cote d'Ivoire,57.422,25716544,Africa
+Cameroon,58.921,25876380,Africa
+Dem. Rep. Congo,60.368,86790567,Africa
+Congo,64.29,5380508,Africa
+Colombia,77.109,50339443,South America
+Comoros,64.118,850886,Africa
+Cabo Verde,72.782,549935,Africa
+Costa Rica,80.095,5047561,Africa
+Cuba,78.726,11333483,South America
+Cyprus,80.828,1198575,Europe
+Czech Republic,79.02926829,10669709,Europe
+Germany,80.89268293,83132799,Europe
+Djibouti,66.582,973560,Africa
+Denmark,80.95365854,5818553,Europe
+Dominican Republic,73.892,10738958,North America
+Algeria,76.693,43053054,Africa
+Ecuador,76.8,17373662,South America
+Egypt,71.825,100388073,Africa
+Eritrea,65.941,"3,561,902",Africa
+Spain,83.43170732,47076781,Europe
+Estonia,78.24390244,1326590,Europe
+Ethiopia,66.24,112078730,Africa
+Finland,81.73414634,5520314,Europe
+Fiji,67.341,889953,Oceania
+France,82.72439024,67059887,Europe
+Faroe Islands,82.54878049,48678,Europe
+Gabon,66.187,2172579,Africa
+United Kingdom,81.25609756,66834405,Europe
+Georgia,73.6,3720382,Europe
+Ghana,63.78,30417856,Africa
+Guinea,61.185,12771246,Africa
+Gambia,61.735,2347706,Africa
+Guinea-Bissau,58.003,1920922,Africa
+Eq. Guinea,58.402,1355986,Africa
+Greece,81.78780488,10716322,Europe
+Grenada,72.384,112003,Europe
+Guatemala,74.063,16604026,South America
+Guam,79.859,167294,Oceania
+Guyana,69.774,782766,South America
+Hong Kong ,84.93414634,7507400,Asia
+Honduras,75.088,9746117,Africa
+Croatia,78.07073171,4067500,Europe
+Haiti,63.66,11263077,North America
+Hungary,76.06585366,9769949,Europe
+Indonesia,71.509,270625568,Asia
+India,69.416,1366417754,Asia
+Ireland,82.25609756,4941444,Europe
+Iran,76.479,82913906,Asia
+Iraq,70.454,39309783,Asia
+Iceland,82.86097561,361313,Europe
+Israel,82.80243902,9053300,Asia
+Italy,83.34634146,60297396,Europe
+Jamaica,74.368,2948279,North America
+Jordan,74.405,10101694,Asia
+Japan,84.21097561,126264931,Asia
+Kazakhstan,73.15,18513930,Asia
+Kenya,66.342,52573973,Africa
+Kyrgyz Republic,71.4,6456900,Asia
+Cambodia,69.57,16486542,Asia
+Kiribati,68.116,117606,Oceania
+South Korea,82.62682927,51709098,Asia
+Kuwait,75.398,4207083,Asia
+Laos,67.61,7169455,Asia
+Lebanon,78.875,6855713,Asia
+Liberia,63.73,4937374,Africa
+Libya,72.724,6777452,Asia
+St. Lucia,76.057,182790,North America
+Liechtenstein,83.04146341,38019,Europe
+Sri Lanka,76.812,21803000,Asia
+Lesotho,53.705,2125268,Europe
+Lithuania,75.6804878,2786844,Europe
+Luxembourg,82.29512195,619896,Europe
+Latvia,74.78292683,1912789,Europe
+Macao ,84.118,640445,Europe
+St. Martin (French part),79.87073171,38002,North America
+Morocco,76.453,36471769,Europe
+Moldova,71.808,2657637,Europe
+Madagascar,66.681,26969307,Africa
+Maldives,78.627,530953,Asia
+Mexico,74.992,127575529,South America
+North Macedonia,75.688,2083459,Europe
+Mali,58.893,19658031,Africa
+Malta,82.44878049,502653,Europe
+Myanmar,66.867,54045420,Asia
+Montenegro,76.77,622137,Europe
+Mongolia,69.689,3225167,Asia
+Mozambique,60.163,30366036,Africa
+Mauritania,64.704,4525696,Africa
+Mauritius,74.41634146,1265711,Africa
+Malawi,63.798,18628747,Africa
+Malaysia,75.997,31949777,Asia
+Namibia,63.373,2494530,Africa
+New Caledonia,77.14878049,287800,Oceania
+Niger,62.024,23310715,Africa
+Nigeria,54.332,200963599,Africa
+Nicaragua,74.275,6545502,South America
+Netherlands,81.81219512,17332850,Europe
+Norway,82.75853659,5347896,Europe
+Nepal,70.478,28608710,Asia
+New Zealand,81.85853659,4917000,Oceania
+Oman,77.633,4974986,Asia
+Pakistan,67.114,216565318,Asia
+Panama,78.329,4246439,South America
+Peru,76.516,32510453,South America
+Philippines,71.095,108116615,Asia
+Papua New Guinea,64.263,8776109,Oceania
+Poland,77.60243902,37970874,Europe
+Puerto Rico,79.77819512,3193694,Africa
+North Korea,72.095,25666161,Asia
+Portugal,81.32439024,10269417,Europe
+Paraguay,74.131,7044636,South America
+West Bank and Gaza,73.895,4685306,Asia
+Qatar,80.1,2832067,Asia
+Romania,75.35853659,19356544,Europe
+Rwanda,68.7,12626950,Africa
+Saudi Arabia,74.998,34268528,Asia
+Sudan,65.095,42813238,Africa
+Senegal,67.665,16296364,Africa
+Singapore,83.14634146,5703569,Asia
+Solomon Islands,72.835,669823,Oceania
+Sierra Leone,54.309,7813215,Africa
+El Salvador,73.096,6453553,South America
+Somalia,57.068,15442905,Africa
+Serbia,75.8902439,6944975,Europe
+S. Sudan,57.604,11062113,Africa
+Sao Tome and Principe,70.17,215056,Africa
+Suriname,71.57,581372,South America
+Slovak Republic,77.26585366,5454073,Europe
+Slovenia,81.37804878,2087946,Europe
+Sweden,82.55853659,10285453,Europe
+Eswatini,59.401,1148130,Africa
+Seychelles,72.84146341,97625,Africa
+Syria,71.779,17070135,Asia
+Chad,53.977,15946876,Africa
+Togo,60.76,8082366,Africa
+Thailand,76.931,69625582,Asia
+Tajikistan,70.879,9321018,Asia
+Turkmenistan,68.073,5942089,Asia
+Timor-Leste,69.26,1293119,Asia
+Tonga,70.801,104494,Oceania
+Trinidad and Tobago,73.38,1394973,South America
+Tunisia,76.505,11694719,Asia
+Turkey,77.437,83429615,Asia
+Tanzania,65.015,58005463,Africa
+Uganda,62.973,44269594,Africa
+Ukraine,71.58268293,44385155,Europe
+Uruguay,77.77,3461734,South America
+United States of America,78.53902439,328239523,North America
+Uzbekistan,71.573,33580650,Asia
+St. Vincent and the Grenadines,72.415,110589,North America
+Virgin Islands (U.S.),79.56829268,106631,North America
+Vietnam,75.317,96462106,Asia
+Vanuatu,70.323,299882,Oceania
+Samoa,73.187,197097,Oceania
+Kosovo,72.19512195,1794248,Europe
+Yemen,66.096,29161922,Asia
+South Africa,63.857,58558270,Africa
+Zambia,63.51,17861030,Africa
+Zimbabwe,61.195,14645468,Africa
