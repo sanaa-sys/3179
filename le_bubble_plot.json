@@ -34,7 +34,9 @@
       }
     }
   ],
-
+   "transform": [
+     {"filter": "Continent_selection == null || datum.Continent == Continent_selection"}
+   ],
   "encoding": {
     "x": {
       "field": "Fertility Rate",
@@ -105,7 +107,35 @@
           
         ]
       }
+    },
+        {
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -12,
+        "fontSize": 11.5,
+        "fontStyle": "italic"
+      },
+      "encoding": {
+        "text": {"field": "Country Name", "type": "nominal"},
+        "color": {"value": "black"},
+        "opacity": {
+          "condition": {
+            "test": "datum['Country Name'] == 'China' || datum['Country Name'] == 'India' || datum['Country Name'] == 'Australia' || datum['Country Name'] == 'Ethiopia' || datum['Country Name'] == 'Germany' || datum['Country Name'] == 'Yemen' ||  datum['Country Name'] == 'United States of America' ||  datum['Country Name'] == 'Philippines'||  datum['Country Name'] == 'Nigeria'||  datum['Country Name'] == 'Somalia'||  datum['Country Name'] == 'Pakistan' ||  datum['Country Name'] == 'Haiti'||  datum['Country Name'] == 'South Africa'||  datum['Country Name'] == 'Iraq'||  datum['Country Name'] == 'Qatar'",
+            "value": 1
+          },
+          "value": 0
+        },
+        "tooltip": [
+          {"field": "Country Name", "type": "nominal"},
+          {"field": "Life Expectancy", "type": "quantitative", "format": ","},
+          {"field": "Fertility Rate", "type": "quantitative", "format": ","},
+          {"field": "Population", "type": "quantitative", "format": ","}
+        ]
+      }
     }
-
+    
   ]
+
 }
