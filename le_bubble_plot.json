@@ -1,61 +1,111 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 500,
-  "height": 400,
-  "title": "Life Expectancy vs Fertility rate (2018 data)",
+  "width": 800,
+  "height": 600,
+  "title": "Life Expectancy vs Fertility Rate",
   "data": {
-  "url": "https://raw.githubusercontent.com/sanaa-sys/3179/main/le_fertility.csv"
+    "url": "https://raw.githubusercontent.com/sanaa-sys/3179/main/le_fertility.csv"
   },
-  
-  "mark": "circle",
-  "encoding": {
-  "x": {
-  "field": "Fertility Rate",
-  "type": "quantitative",
-  "title": "Fertility Rate",
-  "axis": {"tickCount": 7},
-  "scale": {"type": "linear", "domain": [1, 7]}
-  },
-  "y": {
-  "field": "Life Expentancy",
-  "type": "quantitative",
-  "axis": {"tickCount": 6},
-  "scale": {"type": "linear", "domain": [1, 100]}
-  },
-  "color": {
-  "field": "Continent",
-  "type": "nominal",
-  "scale": {
-  "domain": [
-  "North America",
-  "South America",
-  "Europe",
-  "Africa",
-  "Asia",
-  "Oceania"
+  "params": [
+
+    {
+      "name": "Continent_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "labels":[
+          "Show All",
+          "North America",
+          "South America",
+          "Europe",
+          "Africa",
+          "Asia",
+          "Oceania"
+        ],
+        "name": "Continent Selection: "
+      }
+    }
   ],
-  "range": [
-  "#e41a1c",
-  "#984ea3",
-  "#ff7f00",
-  "#a6cee3",
-  "#377eb8",
-  "#a65628"
+
+  "encoding": {
+    "x": {
+      "field": "Fertility Rate",
+      "type": "quantitative",
+      "title": "Fertility Rate",
+      "axis": {"tickCount": 7},
+      "scale": {"type": "linear", "domain": [1, 7]}
+    },
+    "y": {
+      "field": "Life Expectancy",
+      "type": "quantitative",
+      "axis": {"tickCount": 6},
+      "scale": {"type": "linear", "domain": [1, 100]}
+    }
+  },
+  "layer": [
+    {
+      "selection": {
+        "continent_highlight": {
+          "type": "multi",
+          "fields": ["Continent"],
+          "bind": "legend"
+        }
+      },
+      "mark": "circle",
+      "encoding": {
+        "size": {
+          "field": "Population",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
+            "range": [10, 50, 150, 200, 300, 400]
+          },
+          "legend": {"format": ".1s"}
+        },
+        "color": {
+          "field": "Continent",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "North America",
+              "South America",
+              "Europe",
+              "Africa",
+              "Asia",
+              "Oceania"
+            ],
+            "range": [
+              "#e41a1c",
+              "#984ea3",
+              "#ff7f00",
+              "#a6cee3",
+              "#377eb8",
+              "#a65628"
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {"selection": "continent_highlight", "value": 0.6},
+          "value": 0.2
+        },
+        "tooltip": [
+          {"field": "Country Name", "type": "nominal"},
+          {"field": "Life Expectancy", "type": "quantitative", "format": ","},
+          {"field": "Fertility Rate", "type": "quantitative", "format": ","},
+          {"field": "Population", "type": "quantitative", "format": ","}
+          
+        ]
+      }
+    }
+
   ]
-  }
-  },
-  "opacity": {
-  "value": 0.6
-  },
-  "size": {
-  "field": "Population",
-  "type": "quantitative",
-  "scale": {
-  "type": "threshold",
-  "domain": [1000000, 10000000, 50000000, 100000000, 500000000],
-  "range": [10, 50, 150, 200, 300, 400]
-  },
-  "legend": {"format": ".1s"}
-  }
-  }
- }
+}
