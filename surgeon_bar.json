@@ -1,0 +1,16 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 400,
+  "height": 500,
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "url": "https://raw.githubusercontent.com/sanaa-sys/3179/main/surgeon_physician.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "y": {"field": "Country Name", "type": "nominal", "title": "Country Category", "sort": [] },
+    "x": {"field": "Specialist surgical workforce (per 100,000 population)", "type": "quantitative"},
+    "color": {"value": "#009FDA"}
+      
+  } 
+}
