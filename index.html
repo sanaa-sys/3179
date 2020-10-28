@@ -78,29 +78,54 @@
     </div>
   </div> 
    <div class="pure-g">
-    <div class="pure-u-1-1">
+    <div class="pure-u-1-3">
       <h3>Population</h3>
       <p>As of 2019, the world population is approx. 7 billion and is predicted to rise. This rise in population is attributed to many factors such as medical advancements and rise in agricultural productivity which has decreased mortality rate and famine all over the world.</p>
     </div> 
-    <div class="pure-u-1-1">
-      <div id="vis1" style = "height: 400px; width: 300px;"></div>
+    <div class="pure-u-2-3">
+      <div id="vis1" class="vis-container"></div>
     </div> 
    </div> 
+     <div class="pure-g">
+      <div class="pure-u-1-3">
+      <h3>Life Expentancy and Health Expenditure per Capita ($)</h3>
+      <p>There is a positive correlation between Life Expentancy and Health Expenditure which means that countries that invest more money in healthcare are likely to have residents with longer life expectancy. It is also notable that developed countries have higher expenditure and life expectancy unlike developing countries which means that more effort has to be put in to improve the heathcare systems of developing countries. Note that India and China have high life expectancies but low expenditure per capita due to their high population.</p>
+      </div> 
+      <div class="pure-u-2-3">
+        <div id="vis3" class="vis-container"></div>
+      </div>
+    </div> 
+
+  </div>
   <div class="pure-g">
     <div class="pure-u-2-3">
-      <div id="vis2" style = "height: 300px; width: 150px;"></div>
+      <div id="vis2" class="vis-container"></div>
     </div> 
     <div class="pure-u-1-3">
       <h3>Life Expentancy and Fertility Rate</h3>
       <p>It is interesting to note that life expectancy increases with a decrease in fertility rate. This can be due to the fact that the energetic and metabolic costs from reproduction weakens the human body which increases fatality rate. Also, developed countries have higher life expentancy and lower fertility rate than developing countries. This can be due to increased literacy rate which involves women knowning and using more about contraceptives and other birth control options. Also women in these countries may have less societal burden to have children and can devote more time to themselves.</p>
     </div> 
-
-   </div>
+  </div>
+  <div class="pure-g">
+      <div class="pure-u-1-3">
+        <div class="description description-left">
+          <h2>Surgical Workforce and Physicians</h2>
+          <p>It can be noticed that Low Income and Low Middle Income have severe shortages of specialised surgeons and physicans which explains low life expectancies often due to deaths among infants and newborns. The Lancet Comission on Global Surgery recommends at least 20 surgucal workers per 10,1000 people and WHO recommends 4.5 physicans per 1,000 people. More funding have to be given to healthcare systems of these countries in order to meet the SDGs so that their residents get access to life-saving healthcare.</p>
+        </div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="vis4"  class="vis-container"></div>
+      </div>
+      <div class="pure-u-1-3">
+        <div id="vis5"  class="vis-container"></div>
+  </div>
 </div>  
 <script type="text/javascript">
   var specVis1 = "./symbol_map.json";
   var specVis2= "./le_bubble_plot.json";
-
+  var specVis3= "./he_le.json";
+  var specVis4= "./physician_bar.json";
+  var specVis5= "./surgeon_bar.json";
   vegaEmbed('#vis1', specVis1).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
@@ -108,8 +133,21 @@
    vegaEmbed('#vis2', specVis2).then(function(result) {
     // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
   }).catch(console.error);
+
+  vegaEmbed('#vis3', specVis3).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis4', specVis4).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+
+  vegaEmbed('#vis5', specVis5).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
 </script>
 
 </body>
 </html>
+
 
