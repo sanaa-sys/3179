@@ -8,9 +8,13 @@
   },
   "mark": "bar",
   "encoding": {
-    "y": {"field": "Country Name", "type": "nominal", "title": "Country Category", "sort": [] },
-    "x": {"field": "Specialist surgical workforce (per 100,000 people)", "type": "quantitative"},
+    "y": {
+      "field": "Country Name",
+      "type": "nominal",
+      "title": "Country Category",
+      "sort": []
+    },
+    "x": {"field": "Specialist surgical workforce (per 100,000 population)", "type": "quantitative"},
     "color": {"value": "#009FDA"}
-      
-  } 
+  }
 }
