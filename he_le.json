@@ -9,7 +9,7 @@
   "params": [
     {
       "name": "Health_Expenditure",
-      "value": 9000,
+      "value": 500,
       "bind": {
         "input": "range",
         "min": 0,
