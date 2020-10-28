@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "width": 350,
-  "height": 300,
+  "height": 400,
   "title": "Life Expectancy vs Fertility Rate",
   "data": {
     "url": "https://raw.githubusercontent.com/sanaa-sys/3179/main/le_fertility.csv"
@@ -97,8 +97,8 @@
           }
         },
         "opacity": {
-          "condition": {"selection": "continent_highlight", "value": 0.6},
-          "value": 0.2
+          "condition": {"selection": "continent_highlight", "value": 0.4},
+          "value": 0.4
         },
         "tooltip": [
           {"field": "Country Name", "type": "nominal"},
