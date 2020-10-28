@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 150,
+  "width": 145,
   "height": 300,
   "description": "A simple bar chart with embedded data.",
   "data": {
