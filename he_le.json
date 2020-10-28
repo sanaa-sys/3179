@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 350,
+  "width": 400,
   "height": 400,
   "title": "Health Expenditure vs Life Expectancy",
   "data": {
