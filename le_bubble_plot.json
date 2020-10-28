@@ -1,13 +1,12 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 400,
+  "width": 350,
   "height": 300,
   "title": "Life Expectancy vs Fertility Rate",
   "data": {
     "url": "https://raw.githubusercontent.com/sanaa-sys/3179/main/le_fertility.csv"
   },
   "params": [
-
     {
       "name": "Continent_selection",
       "bind": {
@@ -21,7 +20,7 @@
           "Asia",
           "Oceania"
         ],
-        "labels":[
+        "labels": [
           "Show All",
           "North America",
           "South America",
@@ -34,9 +33,11 @@
       }
     }
   ],
-   "transform": [
-     {"filter": "Continent_selection == null || datum.Continent == Continent_selection"}
-   ],
+  "transform": [
+    {
+      "filter": "Continent_selection == null || datum.Continent == Continent_selection"
+    }
+  ],
   "encoding": {
     "x": {
       "field": "Fertility Rate",
@@ -104,16 +105,15 @@
           {"field": "Life Expectancy", "type": "quantitative", "format": ","},
           {"field": "Fertility Rate", "type": "quantitative", "format": ","},
           {"field": "Population", "type": "quantitative", "format": ","}
-          
         ]
       }
     },
-        {
+    {
       "mark": {
         "type": "text",
-        "align": "right",
+        "align": "left",
         "baseline": "middle",
-        "dx": -12,
+        "dx": 12,
         "fontSize": 11.5,
         "fontStyle": "italic"
       },
@@ -122,7 +122,7 @@
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['Country Name'] == 'China' || datum['Country Name'] == 'India' || datum['Country Name'] == 'Australia' || datum['Country Name'] == 'Ethiopia' || datum['Country Name'] == 'Germany' || datum['Country Name'] == 'Yemen' ||  datum['Country Name'] == 'United States of America' ||  datum['Country Name'] == 'Philippines'||  datum['Country Name'] == 'Nigeria'||  datum['Country Name'] == 'Somalia'||  datum['Country Name'] == 'Pakistan' ||  datum['Country Name'] == 'Haiti'||  datum['Country Name'] == 'South Africa'||  datum['Country Name'] == 'Iraq'||  datum['Country Name'] == 'Qatar'||  datum['Country Name'] == 'Mexico'||  datum['Country Name'] == 'Fiji'||  datum['Country Name'] == 'Brazil'||  datum['Country Name'] == 'Georgia'",
+            "test": "datum['Country Name'] == 'Poland' || datum['Country Name'] == 'India' || datum['Country Name'] == 'Australia' || datum['Country Name'] == 'Ethiopia'  ||  datum['Country Name'] == 'Philippines'||  datum['Country Name'] == 'Nigeria'||  datum['Country Name'] == 'Somalia'||  datum['Country Name'] == 'Pakistan' ||  datum['Country Name'] == 'South Africa'||  datum['Country Name'] == 'Iraq'||  datum['Country Name'] == 'Qatar'||  datum['Country Name'] == 'Mexico'||  datum['Country Name'] == 'Fiji'||  datum['Country Name'] == 'Italy'",
             "value": 1
           },
           "value": 0
@@ -135,7 +135,5 @@
         ]
       }
     }
-    
   ]
-
 }
