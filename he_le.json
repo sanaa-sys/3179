@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "width": 400,
+  "width": 450,
   "height": 400,
   "title": "Health Expenditure vs Life Expectancy",
   "data": {
@@ -106,7 +106,7 @@
         "color": {"value": "black"},
         "opacity": {
           "condition": {
-            "test": "datum['Country Name'] == 'China' || datum['Country Name'] == 'India' || datum['Country Name'] == 'Australia' || datum['Country Name'] == 'Zimbabwe' || datum['Country Name'] == 'Germany' || datum['Country Name'] == 'Yemen' ||  datum['Country Name'] == 'United States of America' ||  datum['Country Name'] == 'Chile'||  datum['Country Name'] == 'Nigeria'||  datum['Country Name'] == 'Somalia'||  datum['Country Name'] == 'South Korea' ||  datum['Country Name'] == 'Japan'||  datum['Country Name'] == 'South Africa'||  datum['Country Name'] == 'Sweden'||  datum['Country Name'] == 'Qatar'||  datum['Country Name'] == 'Mexico'||  datum['Country Name'] == 'Fiji'||  datum['Country Name'] == 'Brazil'||  datum['Country Name'] == 'Georgia'||  datum['Country Name'] == 'Norway'||  datum['Country Name'] == 'Switzerland'",
+            "test": "datum['Country Name'] == 'China' || datum['Country Name'] == 'India' || datum['Country Name'] == 'Australia'  || datum['Country Name'] == 'Germany' || datum['Country Name'] == 'Yemen' ||  datum['Country Name'] == 'United States of America' ||  datum['Country Name'] == 'Chile'||  datum['Country Name'] == 'Nigeria'||  datum['Country Name'] == 'Somalia'||  datum['Country Name'] == 'South Korea' ||  datum['Country Name'] == 'Japan'||  datum['Country Name'] == 'South Africa'||  datum['Country Name'] == 'Sweden'||  datum['Country Name'] == 'Qatar'||  datum['Country Name'] == 'Brazil'||  datum['Country Name'] == 'Norway'||  datum['Country Name'] == 'Switzerland'",
             "value": 1
           },
           "value": 0
